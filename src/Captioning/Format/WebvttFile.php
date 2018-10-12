@@ -115,6 +115,7 @@ class WebvttFile extends File
                 // see https://www.w3.org/TR/webvtt1/#webvtt-file-bodyhttps://www.w3.org/TR/webvtt1/#webvtt-file-body
                 // point 7
                 while (current($fileContentArray) === '') {
+                    $i++;
                     next($fileContentArray);
                 }
             } elseif ($line !== '') {
