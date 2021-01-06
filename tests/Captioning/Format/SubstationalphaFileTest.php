@@ -1,4 +1,5 @@
 <?php
+
 namespace Captioning\Format;
 
 class SubstationaplphaFileTest extends \PHPUnit_Framework_TestCase
@@ -148,6 +149,19 @@ class SubstationaplphaFileTest extends \PHPUnit_Framework_TestCase
         $expectedCue = new SubstationalphaCue('0:01:12.50', '0:01:32.50', "OK, let's go.");
 
         $this->assertEquals($expectedCue, $file->getLastCue());
+    }
+
+    public function testReadV4PlusNoStrictMode()
+    {
+        $filename = __DIR__ . '/../../Fixtures/Substationalpha/ass_v4plus_nostrict.ass';
+        $file = new SubstationalphaFile($filename, null, false, false);
+
+        $expectedCue = new SubstationalphaCue('0:01:12.50', '0:01:32.50', "OK, let's go.", 0);
+        $this->assertSame(6, $file->getCuesCount());
+        $this->assertEquals($expectedCue, $file->getLastCue());
+
+        $this->setExpectedException(\Exception::class);
+        $file = new SubstationalphaFile($filename);
     }
 
     /**

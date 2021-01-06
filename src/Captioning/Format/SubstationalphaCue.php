@@ -18,7 +18,7 @@ class SubstationalphaCue extends Cue
     {
         parent::__construct($_start, $_stop, $_text);
 
-        $this->layer = $_layer;
+        $this->layer = $_layer !== '' ? $_layer : 0;
         $this->style = $_style;
         $this->name = $_name;
         $this->marginL = $_marginL;

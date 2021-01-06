@@ -6,8 +6,10 @@ use Captioning\File;
 class SubstationalphaFile extends File
 {
 
+    const PATTERN_V4_STRICT = '#Dialogue: Marked=([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{4}),([0-9]{4}),([0-9]{4}),([^,]*),(.+)#';
+    const PATTERN_V4_PLUS_STRICT = '#Dialogue: ([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{1,4}),([0-9]{1,4}),([0-9]{1,4}),([^,]*),(.+)#';
     const PATTERN_V4 = '#Dialogue: Marked=([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{4}),([0-9]{4}),([0-9]{4}),([^,]*),(.+)#';
-    const PATTERN_V4_PLUS = '#Dialogue: ([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{1,4}),([0-9]{1,4}),([0-9]{1,4}),([^,]*),(.+)#';
+    const PATTERN_V4_PLUS = '#Dialogue: ([0-9]?),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{1,4}),([0-9]{1,4}),([0-9]{1,4}),([^,]*),(.+)#';
     const SCRIPT_TYPE_V4 = 'v4.00';
     const SCRIPT_TYPE_V4_PLUS = 'v4.00+';
     const STYLES_V4 = 'V4';
@@ -19,8 +21,9 @@ class SubstationalphaFile extends File
     protected $excludedStyles;
     protected $events;
     protected $comments;
+    protected $requireStrictFileFormat;
 
-    public function __construct($_filename = null, $_encoding = null, $_useIconv = false)
+    public function __construct($_filename = null, $_encoding = null, $_useIconv = false, $_requireStrictFileFormat = true)
     {
         $this->headers = array(
             'Title' => '<untitled>',
@@ -81,6 +84,8 @@ class SubstationalphaFile extends File
         );
 
         $this->comments = array();
+
+        $this->requireStrictFileFormat = $_requireStrictFileFormat;
 
         parent::__construct($_filename, $_encoding, $_useIconv);
     }
@@ -324,6 +329,14 @@ class SubstationalphaFile extends File
      */
     private function getPattern()
     {
+        if ($this->requireStrictFileFormat) {
+            if ($this->getScriptType() == self::SCRIPT_TYPE_V4) {
+                return self::PATTERN_V4_STRICT;
+            }
+
+            return self::PATTERN_V4_PLUS_STRICT;
+        }
+
         if ($this->getScriptType() == self::SCRIPT_TYPE_V4) {
             return self::PATTERN_V4;
         }
