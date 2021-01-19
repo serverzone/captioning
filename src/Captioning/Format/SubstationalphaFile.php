@@ -1,17 +1,21 @@
 <?php
+
 namespace Captioning\Format;
 
 use Captioning\File;
 
+/**
+ * #strictModeException - Throw an exception when in strict mode, if strict mode is implemented
+ *
+ * Specification: http://www.tcax.org/docs/ass-specs.htm
+ */
+
 class SubstationalphaFile extends File
 {
 
-    const PATTERN_V4_STRICT = '#Dialogue: Marked=([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{4}),([0-9]{4}),([0-9]{4}),([^,]*),(.+)#';
-    const PATTERN_V4_PLUS_STRICT = '#Dialogue: ([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{1,4}),([0-9]{1,4}),([0-9]{1,4}),([^,]*),(.+)#';
-    const PATTERN_V4 = '#Dialogue: Marked=([0-9]),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{4}),([0-9]{4}),([0-9]{4}),([^,]*),(.+)#';
-    const PATTERN_V4_PLUS = '#Dialogue: ([0-9]?),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),([0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(.*),(.*),([0-9]{1,4}),([0-9]{1,4}),([0-9]{1,4}),([^,]*),(.+)#';
     const SCRIPT_TYPE_V4 = 'v4.00';
     const SCRIPT_TYPE_V4_PLUS = 'v4.00+';
+
     const STYLES_V4 = 'V4';
     const STYLES_V4_PLUS = 'V4+';
 
@@ -21,9 +25,11 @@ class SubstationalphaFile extends File
     protected $excludedStyles;
     protected $events;
     protected $comments;
-    protected $requireStrictFileFormat;
 
-    public function __construct($_filename = null, $_encoding = null, $_useIconv = false, $_requireStrictFileFormat = true)
+    protected $eventsFormat = [];
+    protected $stylesFormat = [];
+
+    public function __construct($_filename = null, $_encoding = null, $_useIconv = false)
     {
         $this->headers = array(
             'Title' => '<untitled>',
@@ -85,8 +91,6 @@ class SubstationalphaFile extends File
 
         $this->comments = array();
 
-        $this->requireStrictFileFormat = $_requireStrictFileFormat;
-
         parent::__construct($_filename, $_encoding, $_useIconv);
     }
 
@@ -110,7 +114,12 @@ class SubstationalphaFile extends File
      */
     public function getScriptType()
     {
-        return $this->getHeader('ScriptType');
+        $type = $this->getHeader('ScriptType');
+        if ($type === false) {
+            throw new \Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
+        }
+
+        return $type;
     }
 
     public function setHeader($_name, $_value)
@@ -211,34 +220,116 @@ class SubstationalphaFile extends File
     public function parse()
     {
         $fileContentArray = $this->getFileContentAsArray();
+        $currentSection = '';
+        $stylesFormat = [];
+        $eventsFormat = [];
 
         while (($line = $this->getNextValueFromArray($fileContentArray)) !== false) {
-            $line = preg_replace('/[\x{feff}-\x{ffff}]/u', '', $line);
+            $line = preg_replace('/^[\x{feff}-\x{ffff}]/u', '', $line);
 
-            // parsing headers
-            if ($line === '[Script Info]') {
-                while (($line = trim($this->getNextValueFromArray($fileContentArray))) !== '') {
-                    if ($line[0] == ';') {
-                        $this->addComment(ltrim($line, '; '));
-                    } else {
-                        $tmp = explode(':', $line);
-                        if (count($tmp) == 2) {
-                            $this->setHeader(trim($tmp[0]), trim($tmp[1]));
-                        }
-                    }
-                }
+            // Ignore an empty line (hopefuly this is safe)
+            if (trim($line) == '') {
+                continue;
             }
+
+            // Match comments
+            if (preg_match('#^\s+;(.*)#', $line, $matches) !== 0) {
+                $this->addComment($matches[1]);
+                continue;
+            }
+
+            // Match section: [Name]
+            if (preg_match('#^\[(.*)\]$#', $line, $matches) !== 0) {
+                $currentSection = $matches[1];
+                continue;
+            }
+
+            switch ($currentSection) {
+                // Empty section is not allowed
+                case '':
+                    throw new \Exception(sprintf('%s is not valid file (empty section for line: "%s"', $this->filename, $line));
+                    break;
+
+                // Section: Script Info
+                case 'Script Info':
+                    $this->parseHeader($line);
+                    break;
+
+                // Section: V4+ Styles
+                case 'V4+ Styles':
+                    $this->parseV4PlusStyles($line);
+                    break;
+
+                // Section: Events
+                case 'Events':
+                    $this->parseEvent($line);
+                    break;
+
+                // Unknown section
+                default:
+                    // #strictModeException - Unknown section
+                    break;
+            }
+        }
+
+        // Result validation
+        if ($this->getScriptType() === false) {
+            throw new \Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
+        }
+
+        if ($this->getCuesCount() == 0) {
+            throw new \Exception($this->filename . ' is not a proper .ass file (no events).');
+        }
+
+        return $this;
+    }
+
+    /**
+     * Process line in Script Info section
+     *
+     * @param $input Whole line to process
+     */
+    protected function parseHeader(string $input) {
+        $tmp = explode(':', $input);
+        if (count($tmp) == 2) {
+            $this->setHeader(trim($tmp[0]), trim($tmp[1]));
+        }
+    }
+
+    /**
+     * Process line with V4+ styles
+     *
+     * @param $input Whole line to process
+     */
+    protected function parseV4PlusStyles(string $input) {
+        $tmp = explode(':', $input, 2);
+        if (count($tmp) != 2) {
+            // #strictModeException - Might be incorrect, needs to be checked
+            return;
+        }
+
+        $tmp[1] = trim($tmp[1]);
+        switch ($tmp[0]) {
+            case 'Format':
+                if (count($this->stylesFormat) > 0) {
+                    throw new \Exception(sprintf('%s is not valid file (duplicate styles format definition).', $this->filename));
+                }
+                $this->stylesFormat = array_map(function ($value) {
+                        return trim($value);
+                    }, explode(',', $tmp[1]));
+                break;
+
+            case 'Style':
+                if (count($this->stylesFormat) == 0) {
+                    throw new \Exception(sprintf('%s is not valid file (missing format styles before style).', $this->filename));
+                }
+
+
+/*
+            // TO BE CONTINUED ...
 
             // parsing styles
             if ($line === '[V4+ Styles]') {
-                $line = $this->getNextValueFromArray($fileContentArray);
-                $tmp_styles = array();
-                $tmp = explode(':', $line);
-                if ($tmp[0] !== 'Format') {
-                    throw new \Exception($this->filename . ' is not valid file (format line).');
-                }
-                $tmp2 = explode(',', $tmp[1]);
-
                 foreach ($tmp2 as $s) {
                     $tmp_styles[trim($s)] = null;
                 }
@@ -258,28 +349,67 @@ class SubstationalphaFile extends File
                 break;
             }
         }
+*/
+                break;
 
-        if ($this->getScriptType() === false) {
-            throw new \Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
+            default:
+                // #strictModeException - Unknown styles command
+                break;
+        }
+    }
+
+    /**
+     * Process line in Events section
+     *
+     * @param $input Whole line to process
+     */
+    protected function parseEvent(string $input) {
+        $tmp = explode(':', $input, 2);
+        if (count($tmp) != 2) {
+            // #strictModeException - Incorrect event format
+            return;
         }
 
-        $matches = array();
-        $pattern = $this->getPattern();
-        preg_match_all($pattern, $this->fileContent, $matches);
-        $matchesCount = count($matches[1]);
-        if ($matchesCount === 0) {
-            throw new \Exception($this->filename . ' is not a proper .ass file (no events).');
+        switch ($tmp[0]) {
+            case 'Format':
+                $format = explode(',', $tmp[1]);
+                // This is a hack to allow duplicate Format lines
+                if (count($this->eventsFormat) > 0 && $format != $this->eventsFormat) {
+                    throw new \Exception(sprintf('%s is not a valid file (duplicate events format definition)', $this->filename));
+                }
+                $this->eventsFormat = $format;
+                break;
+            case 'Dialogue':
+                $tmp[1] = trim($tmp[1]);
+                if (count($this->eventsFormat) == 0) {
+                    throw new \Exception(sprintf('%s is not a valid file (events format not defined)', $this->filename));
+                }
+                $row = [
+                    'start'   => null,
+                    'end'     => null,
+                    'text'    => null,
+                    'layer'   => 0,
+                    'style'   => 'Default',
+                    'name'    => '',
+                    'marginl' => '0000',
+                    'marginr' => '0000',
+                    'marginv'  => '0000',
+                    'effect'  => '',
+                ];
+                $tmp = explode(',', $tmp[1], count($this->eventsFormat));
+                foreach ($this->eventsFormat as $index => $entry) {
+                    $row[strtolower(trim($entry))] = $tmp[$index];
+                }
+                if (strlen($row['text']) != 0) {
+                  $this->addCue(new SubstationalphaCue(
+                      $row['start'], $row['end'], $row['text'], $row['layer'], $row['style'], $row['name'], $row['marginl'], $row['marginr'], $row['marginv'], $row['effect']
+                  ));
+                }
+                break;
+            default:
+                // #strictModeException - Unknown event command
+                break;
         }
-
-        for ($i = 0; $i < $matchesCount; $i++) {
-            $cue = new SubstationalphaCue(
-                $matches[2][$i], $matches[3][$i], $matches[10][$i], $matches[1][$i], $matches[4][$i], $matches[5][$i], $matches[6][$i], $matches[7][$i], $matches[8][$i], $matches[9][$i]
-            );
-
-            $this->addCue($cue);
-        }
-
-        return $this;
     }
 
     public function buildPart($_from, $_to)
@@ -322,25 +452,4 @@ class SubstationalphaFile extends File
         return $this;
     }
 
-    /**
-     * Return event pattern.
-     * 
-     * @return string
-     */
-    private function getPattern()
-    {
-        if ($this->requireStrictFileFormat) {
-            if ($this->getScriptType() == self::SCRIPT_TYPE_V4) {
-                return self::PATTERN_V4_STRICT;
-            }
-
-            return self::PATTERN_V4_PLUS_STRICT;
-        }
-
-        if ($this->getScriptType() == self::SCRIPT_TYPE_V4) {
-            return self::PATTERN_V4;
-        }
-
-        return self::PATTERN_V4_PLUS;
-    }
 }

@@ -1,0 +1,21 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: The-Mummy(0000289053)
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,arial,20,&H00FFFFFF,&H00FFFF00,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1
+Style: Pro,arial,22,&H0000FCFF,&H00FFFF00,&H00000000,&H00000000,1,0,0,0,100,100,0,0,3,2,0,2,10,10,10,1
+Style: Kopie z Pro,arial,20,&H00FFF608,&H00FFFF00,&H00000000,&H00000000,1,0,0,0,100,100,0,0,3,2,0,2,10,10,10,1
+
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:01:08.82,0:01:11.71,Pro,,0,0,0,,{\b1}SMRT JE JEN VSTUPEM DO NOVÉHO ŽIVOTA.{\b0}
+Dialogue: 0,0:01:11.73,0:01:15.37,Pro,,0,0,0,,{\b1}ŽIJEME DNES A BUDEME ŽÍT OPĚT.\NNAVRÁTÍME SE V MNOHA PODOBÁCH.{\b0}
+Dialogue: 0,0:01:15.39,0:01:18.24,Pro,,0,0,0,,{\b1}- Egyptská modlitba za vzkříšení{\b0}
+Dialogue: 0,0:01:39.83,0:01:41.66,Pro,,0,0,0,,{\b1}ANGLIE\N.{\b0}

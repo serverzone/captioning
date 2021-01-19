@@ -159,9 +159,6 @@ class SubstationaplphaFileTest extends \PHPUnit_Framework_TestCase
         $expectedCue = new SubstationalphaCue('0:01:12.50', '0:01:32.50', "OK, let's go.", 0);
         $this->assertSame(6, $file->getCuesCount());
         $this->assertEquals($expectedCue, $file->getLastCue());
-
-        $this->setExpectedException(\Exception::class);
-        $file = new SubstationalphaFile($filename);
     }
 
     /**
@@ -173,4 +170,46 @@ class SubstationaplphaFileTest extends \PHPUnit_Framework_TestCase
 
         $file = new SubstationalphaFile($filename);
     }
+
+    public function testReadV4PlusNoStrictMode2()
+    {
+        $filename = __DIR__ . '/../../Fixtures/Substationalpha/ass_v4plus_valid2.ass';
+        $file = new SubstationalphaFile($filename, null, false, false);
+
+        $this->assertSame(319, $file->getCuesCount());
+
+        $expectedCue = new SubstationalphaCue('0:23:49.57', '0:23:54.25', '{\fad(234,1)}Page 159\N\N{\fs18} Quiet Lakes and Forest Shadows', '0', 'sign_34238_338_Page_2_The_Boys_', 'Sign');
+        $this->assertEquals($expectedCue, $file->getLastCue());
+    }
+
+    public function testReadV4PlusNoStrictMode3()
+    {
+        $filename = __DIR__ . '/../../Fixtures/Substationalpha/00242771a8cc5c26cfe8e3d6e26df2a9-jpn';
+        $file = new SubstationalphaFile($filename, null, false, false);
+
+        $this->assertSame(372, $file->getCuesCount());
+
+        $expectedCue = new SubstationalphaCue('0:00:41.40', '0:00:42.50', '—おい！\N—ひっ！', 0, 'Default', '', '0', '0', '0', '');
+        $this->assertEquals($expectedCue, $file->getCue(0));
+    }
+
+    public function testReadV4PlusNoStrictMode4()
+    {
+        $filename = __DIR__ . '/../../Fixtures/Substationalpha/0ae89e17b74fec8a55757a0c372fab6f-unk1';
+        $file = new SubstationalphaFile($filename, null, false, false);
+
+        $this->assertSame(521, $file->getCuesCount());
+
+        $expectedCue = new SubstationalphaCue('0:01:22.29', '0:01:23.46', "I'm all right. I'm okay.", 0, 'Default', '', '0', '0', '0', '');
+        $this->assertEquals($expectedCue, $file->getCue(31));
+    }
+
+    public function testReadV4PlusDuplicateFormatDefinition()
+    {
+        // There are 2 same lines with Format definition
+        $filename = __DIR__ . '/../../Fixtures/Substationalpha/e1c3c0be75e57406ff537f0bcb0ec735-cze';
+        $file = new SubstationalphaFile($filename, null, false, false);
+        $this->assertSame(4, $file->getCuesCount());
+    }
+
 }
