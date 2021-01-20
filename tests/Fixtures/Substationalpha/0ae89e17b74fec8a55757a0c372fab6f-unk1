@@ -1,0 +1,532 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, AlphaLevel, Encoding
+Style: Default,Arial,16,&Hffffff,&Hffffff,&H0,&H0,0,0,0,1,1,0,2,10,10,10,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Text
+Dialogue: 0,0:00:34.07,0:00:36.07,Default,T-T-T-This is just\Nsloppy craftsmanship.
+Dialogue: 0,0:00:36.16,0:00:37.50,Default,Hey, Rick.
+Dialogue: 0,0:00:37.57,0:00:40.74,Default,Boy, sure is really especially\Nbeautiful out there today, huh?
+Dialogue: 0,0:00:40.83,0:00:42.04,Default,Oh, yes, Morty.
+Dialogue: 0,0:00:42.12,0:00:43.91,Default,L-it's almost unbelievable,\Nisn't it?
+Dialogue: 0,0:00:44.00,0:00:45.04,Default,Yeah, you know?
+Dialogue: 0,0:00:45.12,0:00:46.36,Default,There's something about the air
+Dialogue: 0,0:00:46.38,0:00:48.01,Default,and just the way the sunshine is.
+Dialogue: 0,0:00:48.09,0:00:49.09,Default,Uh, sure, buddy. Yeah.
+Dialogue: 0,0:00:49.09,0:00:50.76,Default,Sure. B-brilliant. Very convincing.
+Dialogue: 0,0:00:50.84,0:00:51.84,Default,Wha... convincing?
+Dialogue: 0,0:00:51.84,0:00:52.93,Default,Oh. Responsive, too.
+Dialogue: 0,0:00:53.01,0:00:54.30,Default,In real time. I love it.
+Dialogue: 0,0:00:54.38,0:00:55.96,Default,Uhh... okay.
+Dialogue: 0,0:00:56.05,0:00:57.25,Default,I'm going to work.
+Dialogue: 0,0:00:57.30,0:00:58.63,Default,Morty, good morning.
+Dialogue: 0,0:00:58.72,0:00:59.76,Default,Dad, good morning.
+Dialogue: 0,0:00:59.85,0:01:01.73,Default,I am going to work. Goodbye.
+Dialogue: 0,0:01:01.81,0:01:03.23,Default,What's with mom?
+Dialogue: 0,0:01:03.31,0:01:04.73,Default,Oh, what's with mom?
+Dialogue: 0,0:01:04.81,0:01:06.64,Default,So, you're saying that\Nshe's acting weird?
+Dialogue: 0,0:01:06.73,0:01:08.23,Default,How sophisticated.
+Dialogue: 0,0:01:08.31,0:01:09.52,Default,Careful, guys.
+Dialogue: 0,0:01:09.61,0:01:11.40,Default,You're gonna burn out\Nthe CPU with this one.
+Dialogue: 0,0:01:11.48,0:01:12.69,Default,Okay, you know what, Rick?
+Dialogue: 0,0:01:12.78,0:01:13.87,Default,You're acting weird, too.
+Dialogue: 0,0:01:13.94,0:01:16.69,Default,Whatever,\Nquote-unquote "Morty."
+Dialogue: 0,0:01:16.78,0:01:17.94,Default,All right, well...
+Dialogue: 0,0:01:18.03,0:01:19.28,Default,I'll see you after school.
+Dialogue: 0,0:01:19.37,0:01:21.12,Default,Ow! Oof! Ugh!
+Dialogue: 0,0:01:21.20,0:01:22.20,Default,Damn it!
+Dialogue: 0,0:01:22.29,0:01:23.46,Default,I'm all right. I'm okay.
+Dialogue: 0,0:01:25.79,0:01:28.96,Default,All right, who can tell\Nme what 5 x 9 is?
+Dialogue: 0,0:01:30.75,0:01:31.58,Default,Morty?
+Dialogue: 0,0:01:31.67,0:01:32.54,Default,Uh, me?
+Dialogue: 0,0:01:32.63,0:01:33.80,Default,What is 5 x 9?
+Dialogue: 0,0:01:33.88,0:01:36.96,Default,Umm... you know,\Nit's uhh ...at least 40.
+Dialogue: 0,0:01:38.22,0:01:40.43,Default,Morty, that's exactly correct!
+Dialogue: 0,0:01:40.51,0:01:43.01,Default,5 x 9 is at least 40!
+Dialogue: 0,0:01:43.10,0:01:43.98,Default,Come up here.
+Dialogue: 0,0:01:44.06,0:01:45.40,Default,Whoo! Way to go, Morty!
+Dialogue: 0,0:01:45.48,0:01:47.86,Default,Everybody,\Nthis is the best student.
+Dialogue: 0,0:01:47.94,0:01:49.86,Default,I want you to be\Nthe teacher today.
+Dialogue: 0,0:01:49.94,0:01:51.32,Default,Teach us, Morty!
+Dialogue: 0,0:01:51.40,0:01:52.57,Default,Interesting.
+Dialogue: 0,0:01:52.65,0:01:54.03,Default,W-w-w-what do you\Nwant me to teach you?
+Dialogue: 0,0:01:54.11,0:01:55.16,Default,Ooh, ooh!
+Dialogue: 0,0:01:55.24,0:01:56.99,Default,How do you make\Nconcentrated dark matter?
+Dialogue: 0,0:01:57.07,0:01:58.23,Default,Oh, that's a good question.
+Dialogue: 0,0:01:58.32,0:01:59.65,Default,Concentrated huh?
+Dialogue: 0,0:01:59.74,0:02:00.86,Default,Concentrated dark matter...
+Dialogue: 0,0:02:00.95,0:02:03.46,Default,the fuel for accelerated\Nspace travel.
+Dialogue: 0,0:02:03.54,0:02:04.54,Default,Now, do you know how to make it?
+Dialogue: 0,0:02:04.62,0:02:05.49,Default,Umm...
+Dialogue: 0,0:02:05.58,0:02:06.58,Default,Come on, Morty.
+Dialogue: 0,0:02:06.58,0:02:08.74,Default,Isn't your grandpa,\Nlike, a scientist?
+Dialogue: 0,0:02:08.83,0:02:11.37,Default,Oh, yeah, but, you know,\Nhe told me that I shouldn't go
+Dialogue: 0,0:02:11.46,0:02:14.08,Default,around spouting off about, you\Nknow, his science and stuff.
+Dialogue: 0,0:02:14.17,0:02:17.17,Default,I bet you've seen him make\Nconcentrated dark matter a lot.
+Dialogue: 0,0:02:17.26,0:02:20.43,Default,You know, if you tell us,\NI'll be your girlfriend.
+Dialogue: 0,0:02:20.51,0:02:21.59,Default,Uh, y-you will?
+Dialogue: 0,0:02:21.68,0:02:23.60,Default,Seems like a rare opportunity,\NMorty.
+Dialogue: 0,0:02:25.06,0:02:26.81,Default,Morty, u-uh, come on.\NThere's a family emergency.
+Dialogue: 0,0:02:26.89,0:02:27.97,Default,Stop right there!
+Dialogue: 0,0:02:28.06,0:02:29.18,Default,If he leaves,\NI'm giving him an "F."
+Dialogue: 0,0:02:29.27,0:02:30.27,Default,He doesn't care.
+Dialogue: 0,0:02:30.31,0:02:31.31,Default,Aw, man!
+Dialogue: 0,0:02:31.36,0:02:32.69,Default,Rick, I have to go back!
+Dialogue: 0,0:02:32.77,0:02:34.14,Default,I think I was about\Nto get married!
+Dialogue: 0,0:02:34.23,0:02:35.31,Default,Ugh! Take a shower with me,\NMorty.
+Dialogue: 0,0:02:35.40,0:02:36.23,Default,What?!
+Dialogue: 0,0:02:36.32,0:02:37.53,Default,Listen to me, Morty.
+Dialogue: 0,0:02:37.61,0:02:39.40,Default,Get your clothes off and\Nget in the shower right now.
+Dialogue: 0,0:02:39.49,0:02:41.20,Default,Y-y-y-you got to\Ntrust me, Morty.
+Dialogue: 0,0:02:41.28,0:02:42.28,Default,Ugh!
+Dialogue: 0,0:02:42.32,0:02:43.61,Default,I'm gonna get an\N"F" in class, Rick.
+Dialogue: 0,0:02:43.70,0:02:44.82,Default,Morty, that's not class.
+Dialogue: 0,0:02:44.91,0:02:46.36,Default,T-T-T-That wasn't your teacher.
+Dialogue: 0,0:02:46.45,0:02:47.62,Default,This isn't your school.
+Dialogue: 0,0:02:47.70,0:02:49.24,Default,This entire world\Nis not the world.
+Dialogue: 0,0:02:49.33,0:02:51.73,Default,We're inside a huge simulation\Nchamber on an alien spaceship.
+Dialogue: 0,0:02:51.79,0:02:52.79,Default,Wait a minute.
+Dialogue: 0,0:02:52.79,0:02:53.96,Default,W-what are you talking about?
+Dialogue: 0,0:02:54.04,0:02:55.87,Default,It's all fake  Morty...\Nall of it.
+Dialogue: 0,0:02:55.96,0:02:59.71,Default,Nanobotic renderings, a bunch\Nof crazy fake nonsense, Morty.
+Dialogue: 0,0:02:59.80,0:03:01.56,Default,I couldn't say so until\Nwe got in the shower.
+Dialogue: 0,0:03:01.64,0:03:02.85,Default,They won't monitor us in here.
+Dialogue: 0,0:03:02.93,0:03:04.43,Default,Monitor us?! W-who?!
+Dialogue: 0,0:03:04.51,0:03:05.93,Default,Zigerion scammers, Morty...
+Dialogue: 0,0:03:06.01,0:03:09.10,Default,the Galaxy's most ambitious,\Nleast successful con artists.
+Dialogue: 0,0:03:09.18,0:03:11.35,Default,You know, it's lucky for\Nus they're also really
+Dialogue: 0,0:03:11.44,0:03:12.48,Default,uncomfortable with nudity.
+Dialogue: 0,0:03:12.48,0:03:13.65,Default,Aw, come on, Rick.
+Dialogue: 0,0:03:13.73,0:03:14.98,Default,If everyone's just\Ngonna be insane today,
+Dialogue: 0,0:03:15.07,0:03:17.11,Default,at least let me be\Ninsane with Jessica.
+Dialogue: 0,0:03:17.19,0:03:18.15,Default,I can't  let\Nyou do that, Morty.
+Dialogue: 0,0:03:18.24,0:03:19.03,Default,Give it to me!
+Dialogue: 0,0:03:19.11,0:03:19.90,Default,No!
+Dialogue: 0,0:03:19.99,0:03:20.83,Default,You give it to me!
+Dialogue: 0,0:03:20.90,0:03:22.73,Default,G-g-give it! No, Rick!
+Dialogue: 0,0:03:31.54,0:03:33.20,Default,Oh, God, Sir!\NThey're still naked!
+Dialogue: 0,0:03:33.29,0:03:34.75,Default,Ugh.
+Dialogue: 0,0:03:34.84,0:03:37.09,Default,Well, check every five Quintons\Nand tell me when they're not.
+Dialogue: 0,0:03:37.17,0:03:39.38,Default,I think we should\Nmake Kevin look, sir.
+Dialogue: 0,0:03:39.46,0:03:40.46,Default,What?! No!
+Dialogue: 0,0:03:40.51,0:03:41.93,Default,W-w-why would you even say that?
+Dialogue: 0,0:03:42.01,0:03:44.06,Default,Uh, sir, we have\Na situation over here.
+Dialogue: 0,0:03:44.14,0:03:45.68,Default,If there's a wiener on that\Nmonitor,
+Dialogue: 0,0:03:45.76,0:03:47.26,Default,I swear to god, Stu...
+Dialogue: 0,0:03:47.35,0:03:49.27,Default,something is drawing a\Nlot of processing power.
+Dialogue: 0,0:03:49.35,0:03:50.52,Default,Oh, wait. No wonder.
+Dialogue: 0,0:03:50.60,0:03:52.97,Default,There's another real\Nhuman in the simulator.
+Dialogue: 0,0:03:53.06,0:03:55.31,Default,Okay, Jerry...\Nbig pitch meeting.
+Dialogue: 0,0:03:55.40,0:03:56.53,Default,Make-or-break time.
+Dialogue: 0,0:03:57.61,0:03:58.61,Default,You can do this.
+Dialogue: 0,0:03:58.61,0:03:59.66,Default,How did this happen?!
+Dialogue: 0,0:03:59.74,0:04:01.16,Default,Where's the\NAbductions Department?
+Dialogue: 0,0:04:01.24,0:04:03.78,Default,Hey, man, Abductions just\Nfollows the acquisition order.
+Dialogue: 0,0:04:03.86,0:04:05.28,Default,Don't put this on Acquisitions!
+Dialogue: 0,0:04:05.37,0:04:07.91,Default,We only acquire humans that\Nhaven't been simulated!
+Dialogue: 0,0:04:07.99,0:04:10.70,Default,Well, simulations doesn't\Nsimulate anybody that's been
+Dialogue: 0,0:04:10.79,0:04:12.92,Default,abducted,\Nso  oh, I see!
+Dialogue: 0,0:04:13.00,0:04:14.30,Default,Oh, oh!\NIt was no one's fault.
+Dialogue: 0,0:04:14.37,0:04:15.54,Default,Oh, okay.
+Dialogue: 0,0:04:15.63,0:04:16.80,Default,I'm sorry.\NWell, then, problem solved.
+Dialogue: 0,0:04:16.88,0:04:17.92,Default,Oh, wait... no.
+Dialogue: 0,0:04:18.00,0:04:19.96,Default,There's still another\Nhuman in here!
+Dialogue: 0,0:04:20.05,0:04:21.39,Default,Who is he?
+Dialogue: 0,0:04:21.47,0:04:22.97,Default,Rick's son-in-law,\NJerry Smith.
+Dialogue: 0,0:04:23.05,0:04:25.84,Default,So far, he hasn't noticed\Nhe's in a simulation.
+Dialogue: 0,0:04:27.01,0:04:28.49,Default,Well, cap his sector at 5%\Nprocessing,
+Dialogue: 0,0:04:28.56,0:04:30.69,Default,keep his settings on auto, and\Nwe'll deal with him later.
+Dialogue: 0,0:04:30.77,0:04:32.90,Default,Rick Sanchez is the target.
+Dialogue: 0,0:04:35.48,0:04:36.48,Default,Got to relax.
+Dialogue: 0,0:04:36.56,0:04:37.85,Default,It's just a pitch.
+Dialogue: 0,0:04:37.94,0:04:39.19,Default,Got to relax.
+Dialogue: 0,0:04:41.07,0:04:42.53,Default,This is Earth radio.
+Dialogue: 0,0:04:42.61,0:04:45.23,Default,And now, here's... human music.
+Dialogue: 0,0:04:48.53,0:04:50.45,Default,Hmm. Human music.
+Dialogue: 0,0:04:50.54,0:04:53.00,Default,I like it.
+Dialogue: 0,0:05:06.09,0:05:07.09,Default,Rick!
+Dialogue: 0,0:05:07.09,0:05:08.17,Default,Uhp, uhp, uhp!
+Dialogue: 0,0:05:08.26,0:05:09.55,Default,Morty, keep your hands\Noff your ding-dong!
+Dialogue: 0,0:05:09.64,0:05:11.12,Default,It's the only way\Nwe can speak freely.
+Dialogue: 0,0:05:11.14,0:05:12.35,Default,Look around you, Morty.
+Dialogue: 0,0:05:12.43,0:05:14.47,Default,Do you really think\Nthis  world is real?
+Dialogue: 0,0:05:14.56,0:05:17.15,Default,You'd have to be an idiot not to\Nnotice all the sloppy details.
+Dialogue: 0,0:05:17.23,0:05:19.36,Default,Look... that guy's putting\Na bun between two hot dogs.
+Dialogue: 0,0:05:19.44,0:05:20.49,Default,I don't know, Rick.
+Dialogue: 0,0:05:20.57,0:05:22.03,Default,I mean, I've seen people\Ndo that before.
+Dialogue: 0,0:05:22.11,0:05:23.43,Default,Well, look at that old lady.
+Dialogue: 0,0:05:23.44,0:05:25.06,Default,She's... she's walking\Na cat on a leash.
+Dialogue: 0,0:05:25.15,0:05:27.07,Default,Uh, Mrs. Spencer does\Nthat all the time, Rick.
+Dialogue: 0,0:05:27.16,0:05:29.50,Default,Look, I-I-l don't want to\Nhear about Mrs. Spencer, Morty!
+Dialogue: 0,0:05:29.57,0:05:30.65,Default,She's an idiot!
+Dialogue: 0,0:05:30.74,0:05:31.61,Default,All right, all right, there.
+Dialogue: 0,0:05:31.70,0:05:32.86,Default,W-what about that, Morty?
+Dialogue: 0,0:05:32.95,0:05:34.70,Default,Okay, okay, you got me on that one.
+Dialogue: 0,0:05:34.79,0:05:35.92,Default,Oh, really, Morty?
+Dialogue: 0,0:05:36.00,0:05:37.46,Default,Are you sure you haven't\Nseen that somewhere
+Dialogue: 0,0:05:37.54,0:05:38.41,Default,in real life before?
+Dialogue: 0,0:05:38.50,0:05:39.75,Default,No, no.\NI haven't seen that.
+Dialogue: 0,0:05:39.84,0:05:41.80,Default,I mean, why would a\Npop tart want to live inside
+Dialogue: 0,0:05:41.88,0:05:43.22,Default,a toaster, Rick?
+Dialogue: 0,0:05:43.30,0:05:45.68,Default,I mean, that would be, like, the\Nscariest place for them to live.
+Dialogue: 0,0:05:45.76,0:05:46.80,Default,You know what I mean?
+Dialogue: 0,0:05:46.88,0:05:48.12,Default,You're missing the point, Morty.
+Dialogue: 0,0:05:48.14,0:05:50.06,Default,Why would he drive a smaller\Ntoaster with wheels?
+Dialogue: 0,0:05:50.14,0:05:52.66,Default,I mean, does your car look like\Na smaller version of your house?
+Dialogue: 0,0:05:52.72,0:05:53.76,Default,No.
+Dialogue: 0,0:05:53.85,0:05:54.85,Default,So, why are they doing this?
+Dialogue: 0,0:05:54.93,0:05:56.01,Default,W-what do they want?
+Dialogue: 0,0:05:56.10,0:05:57.18,Default,Well, that would be\Nobvious to you, Morty,
+Dialogue: 0,0:05:57.27,0:05:58.51,Default,if you'd been paying attention.
+Dialogue: 0,0:06:01.15,0:06:02.99,Default,We got the President of the\NUnited States in here!
+Dialogue: 0,0:06:03.07,0:06:05.91,Default,We need 10cc of concentrated\Ndark matter, stat, or he'll die!
+Dialogue: 0,0:06:05.99,0:06:07.95,Default,Concentrated dark matter?
+Dialogue: 0,0:06:08.03,0:06:09.65,Default,They were asking\Nabout that in class.
+Dialogue: 0,0:06:09.74,0:06:11.40,Default,Yeah, it's a special fuel I\Ninvented to travel through
+Dialogue: 0,0:06:11.49,0:06:13.11,Default,space faster than anybody else.
+Dialogue: 0,0:06:13.20,0:06:15.36,Default,These Zigerions are always\Ntrying to scam me out of my secrets,
+Dialogue: 0,0:06:15.45,0:06:17.99,Default,but they made a big\Nmistake this time, Morty.
+Dialogue: 0,0:06:18.08,0:06:19.87,Default,They dragged you into this.
+Dialogue: 0,0:06:19.96,0:06:21.05,Default,Now they're gonna pay!
+Dialogue: 0,0:06:21.13,0:06:22.69,Default,What do you...\Nw-w-what are we gonna do?
+Dialogue: 0,0:06:22.75,0:06:24.67,Default,We'll scam the scammers, Morty.
+Dialogue: 0,0:06:24.76,0:06:27.47,Default,And we're gonna take them for\Neverything they've got.
+Dialogue: 0,0:06:27.55,0:06:30.18,Default,National Apple Farmers of America,
+Dialogue: 0,0:06:30.26,0:06:32.34,Default,welcome to our Ad Agency.
+Dialogue: 0,0:06:32.43,0:06:34.35,Default,I'm Jerry Smith.
+Dialogue: 0,0:06:35.47,0:06:36.47,Default,All right.
+Dialogue: 0,0:06:36.48,0:06:37.86,Default,I'll just... get to the pitch.
+Dialogue: 0,0:06:37.93,0:06:41.89,Default,Um, simple question, gentlemen,\Nwhat are apples?
+Dialogue: 0,0:06:41.98,0:06:43.31,Default,Excuse me.
+Dialogue: 0,0:06:43.40,0:06:45.11,Default,Ahh.
+Dialogue: 0,0:06:47.32,0:06:49.20,Default,What are apples?
+Dialogue: 0,0:06:49.28,0:06:51.87,Default,Apples are food.
+Dialogue: 0,0:06:51.95,0:06:54.46,Default,And... when do we need food?
+Dialogue: 0,0:06:54.53,0:06:56.41,Default,When we're hungry.
+Dialogue: 0,0:06:57.58,0:07:00.54,Default,With that, I give\Nyou your new slogan!
+Dialogue: 0,0:07:02.21,0:07:04.05,Default,Well, say something!
+Dialogue: 0,0:07:04.13,0:07:05.13,Default,Do you like it?
+Dialogue: 0,0:07:05.21,0:07:06.25,Default,Yes.
+Dialogue: 0,0:07:06.34,0:07:07.34,Default,You do?
+Dialogue: 0,0:07:07.34,0:07:08.39,Default,Yes.
+Dialogue: 0,0:07:08.47,0:07:10.01,Default,So... I sold it?
+Dialogue: 0,0:07:10.09,0:07:12.00,Default,I sold the idea?
+Dialogue: 0,0:07:12.09,0:07:13.09,Default,Yes.
+Dialogue: 0,0:07:13.14,0:07:14.77,Default,Oh, my god! Thank you!
+Dialogue: 0,0:07:14.85,0:07:16.73,Default,Thank you.
+Dialogue: 0,0:07:16.81,0:07:17.81,Default,You're welcome.
+Dialogue: 0,0:07:22.10,0:07:23.22,Default,Hey!
+Dialogue: 0,0:07:23.31,0:07:24.68,Default,I just sold my first pitch!
+Dialogue: 0,0:07:26.23,0:07:27.35,Default,Slow down! Lookin' good.
+Dialogue: 0,0:07:27.44,0:07:28.52,Default,My man!
+Dialogue: 0,0:07:31.32,0:07:32.44,Default,Hello.
+Dialogue: 0,0:07:32.53,0:07:34.74,Default,Guess who just sold\Nthe apples campaign.
+Dialogue: 0,0:07:34.83,0:07:36.46,Default,Who just sold\Nthe apples campaign?
+Dialogue: 0,0:07:36.54,0:07:37.92,Default,Me!
+Dialogue: 0,0:07:37.99,0:07:40.62,Default,I guess it wasn't a rip-off\Nof "Got milk? " after all.
+Dialogue: 0,0:07:40.71,0:07:42.50,Default,Guess someone was wrong.
+Dialogue: 0,0:07:42.58,0:07:43.66,Default,Yes.
+Dialogue: 0,0:07:43.75,0:07:45.20,Default,Well, all is forgiven,\Nbecause right now,
+Dialogue: 0,0:07:45.29,0:07:47.57,Default,I've got an erection the size\Nof an East coast lighthouse,
+Dialogue: 0,0:07:47.63,0:07:49.79,Default,and I'm coming home to share\Nit with my beautiful wife.
+Dialogue: 0,0:07:49.80,0:07:50.64,Default,Okay.
+Dialogue: 0,0:07:50.72,0:07:51.51,Default,Wait... really?
+Dialogue: 0,0:07:51.59,0:07:52.42,Default,Yes.
+Dialogue: 0,0:07:52.51,0:07:54.27,Default,Yes! See you in 10 minutes!
+Dialogue: 0,0:07:54.34,0:07:55.34,Default,Hey!
+Dialogue: 0,0:07:55.39,0:07:56.93,Default,I'm going to make\Nlove to my wife!
+Dialogue: 0,0:07:57.01,0:07:58.34,Default,Lookin' good.
+Dialogue: 0,0:07:58.43,0:07:59.22,Default,Slow down!
+Dialogue: 0,0:07:59.31,0:08:00.19,Default,My man!
+Dialogue: 0,0:08:01.73,0:08:02.98,Default,Aw, geez, Rick.
+Dialogue: 0,0:08:03.06,0:08:04.72,Default,I-I don't know if I\Nlike this plan, you know?
+Dialogue: 0,0:08:04.81,0:08:07.64,Default,I mean, crowds,\Nt-t-t-they have a tendency
+Dialogue: 0,0:08:07.73,0:08:08.77,Default,to make me really nervous.
+Dialogue: 0,0:08:08.78,0:08:09.91,Default,Morty, relax.
+Dialogue: 0,0:08:09.99,0:08:11.66,Default,It's just a bunch\Nof 1s and 0s out there.
+Dialogue: 0,0:08:11.74,0:08:12.95,Default,You're gonna be fine.
+Dialogue: 0,0:08:13.03,0:08:14.20,Default,Just follow my lead.
+Dialogue: 0,0:08:14.28,0:08:15.78,Default,Yo, deejay, drop that beat.
+Dialogue: 0,0:08:18.66,0:08:20.11,Default,Uh-oh, Morty.
+Dialogue: 0,0:08:20.20,0:08:23.28,Default,This crowd looks too small for\None of our famous rap concerts.
+Dialogue: 0,0:08:23.37,0:08:25.20,Default,I don't think we can\Nperform our new song,
+Dialogue: 0,0:08:25.29,0:08:27.50,Default,"The Recipe for\NConcentrated Dark Matter,"
+Dialogue: 0,0:08:27.59,0:08:28.72,Default,for a crowd this tiny.
+Dialogue: 0,0:08:28.80,0:08:30.30,Default,You got that right, Rick.
+Dialogue: 0,0:08:33.76,0:08:35.43,Default,Now that's  more like it!
+Dialogue: 0,0:08:35.51,0:08:37.13,Default,Morty, here we go.
+Dialogue: 0,0:08:37.22,0:08:40.09,Default,Let me hear everybody\Nsay "Hey-oh!" yeah!
+Dialogue: 0,0:08:41.60,0:08:42.89,Default,All the ladies say, "Yeah!"
+Dialogue: 0,0:08:44.06,0:08:46.22,Default,Everybody over 30,\Ndo this with your hands!
+Dialogue: 0,0:08:46.31,0:08:48.89,Default,Everybody with a red shirt,\Njump up and down!
+Dialogue: 0,0:09:00.79,0:09:01.87,Default,Mm. Mm. Mm.
+Dialogue: 0,0:09:01.95,0:09:03.41,Default,Yeah, don't move.
+Dialogue: 0,0:09:03.50,0:09:05.71,Default,Mm, mm, mm, mm!
+Dialogue: 0,0:09:05.79,0:09:07.08,Default,Mm!
+Dialogue: 0,0:09:08.42,0:09:09.88,Default,Yo, everyone whose first name\Nbegins with an "L"
+Dialogue: 0,0:09:09.96,0:09:12.58,Default,who isn't Hispanic, walk in a\Ncircle the same number of times
+Dialogue: 0,0:09:12.67,0:09:15.29,Default,as the square root\Nof your age times 10!
+Dialogue: 0,0:09:18.64,0:09:19.43,Default,Run, Morty!
+Dialogue: 0,0:09:19.51,0:09:20.72,Default,Before the system reboots!
+Dialogue: 0,0:09:22.22,0:09:23.26,Default,Yeah! You like that?
+Dialogue: 0,0:09:23.35,0:09:25.35,Default,Now who's unremarkable?
+Dialogue: 0,0:09:25.44,0:09:26.90,Default,You hungry for apples?
+Dialogue: 0,0:09:28.56,0:09:30.60,Default,Are you hungry... for... apples?!
+Dialogue: 0,0:09:35.70,0:09:37.24,Default,Oh, my God.
+Dialogue: 0,0:09:37.32,0:09:40.15,Default,That's the best sex\NI've ever had in my life.
+Dialogue: 0,0:09:40.24,0:09:44.45,Default,It's... it's... too good.
+Dialogue: 0,0:09:44.54,0:09:46.75,Default,I don't deserve this, Beth.
+Dialogue: 0,0:09:46.83,0:09:48.91,Default,I'm a fraud.
+Dialogue: 0,0:09:49.00,0:09:50.00,Default,Oh, man, Rick!
+Dialogue: 0,0:09:50.04,0:09:51.29,Default,W-w-w-where we running to?
+Dialogue: 0,0:09:51.38,0:09:52.63,Default,Out of the simulation, Morty.
+Dialogue: 0,0:09:52.71,0:09:54.63,Default,Normally, the chamber\Noperates like a treadmill,
+Dialogue: 0,0:09:54.71,0:09:56.47,Default,with the virtual world\Ndisappearing behind us
+Dialogue: 0,0:09:56.55,0:09:58.51,Default,and being rendered in front\Nof us as we move through it,
+Dialogue: 0,0:09:58.59,0:10:01.55,Default,but while it's frozen, Morty,\Nwe can get to...
+Dialogue: 0,0:10:01.64,0:10:03.27,Default,the edge.
+Dialogue: 0,0:10:03.35,0:10:04.35,Default,Here we go.
+Dialogue: 0,0:10:04.39,0:10:05.26,Default,Holy crap!
+Dialogue: 0,0:10:05.35,0:10:06.35,Default,Come on, Morty.
+Dialogue: 0,0:10:07.98,0:10:10.03,Default,Sir, they're over the edge.
+Dialogue: 0,0:10:10.11,0:10:11.19,Default,Yes, they are.
+Dialogue: 0,0:10:11.27,0:10:14.19,Default,Just... as... planned.
+Dialogue: 0,0:10:18.15,0:10:20.07,Default,Oh, this is going to\Nbe such a mindfuck!
+Dialogue: 0,0:10:22.24,0:10:24.45,Default,Keep your eyes peeled for the\Ncentral processing room, Morty.
+Dialogue: 0,0:10:24.54,0:10:26.21,Default,That's how we're gonna\Nscam these idiots.
+Dialogue: 0,0:10:26.29,0:10:28.63,Default,So, hey, why do these aliens\Nkeep coming after you, Rick,
+Dialogue: 0,0:10:28.71,0:10:30.11,Default,if you're so\Nmuch smarter than them?
+Dialogue: 0,0:10:30.17,0:10:31.77,Default,It's an obsession\Nfor them at this point.
+Dialogue: 0,0:10:31.84,0:10:33.67,Default,The Zigerions have\Nbeen trying to outsmart
+Dialogue: 0,0:10:33.75,0:10:34.96,Default,me for years, Morty.
+Dialogue: 0,0:10:35.05,0:10:37.05,Default,Every time they do,\NI'm one step ahead of them.
+Dialogue: 0,0:10:37.13,0:10:38.17,Default,Aha!
+Dialogue: 0,0:10:38.26,0:10:39.35,Default,Here we go.
+Dialogue: 0,0:10:40.76,0:10:42.55,Default,Grab as many processors\Nas you can carry, Morty.
+Dialogue: 0,0:10:42.64,0:10:44.02,Default,These guys aren't good at much,
+Dialogue: 0,0:10:44.10,0:10:46.31,Default,but they're reallygood\Nat making these chips.
+Dialogue: 0,0:10:47.73,0:10:49.23,Default,I've got so many,\Nl can barely hold them all.
+Dialogue: 0,0:10:50.31,0:10:51.31,Default,Look at...\Nlook at this.
+Dialogue: 0,0:10:51.40,0:10:52.40,Default,Oops. l dropped one.
+Dialogue: 0,0:10:52.44,0:10:53.78,Default,Don't worry about it, Morty.
+Dialogue: 0,0:10:53.86,0:10:55.28,Default,There's plenty of them,\Nyou little goofball.
+Dialogue: 0,0:10:56.48,0:10:58.02,Default,Come here, Morty!\NOh, l gotcha!
+Dialogue: 0,0:10:58.11,0:10:58.98,Default,Come on, quit it, Rick!
+Dialogue: 0,0:10:59.07,0:11:00.36,Default,Quit it!
+Dialogue: 0,0:11:00.45,0:11:02.37,Default,Nothing wrong with just a\Nlittle bit of horseplay every
+Dialogue: 0,0:11:02.45,0:11:04.00,Default,now and then, little fella.
+Dialogue: 0,0:11:15.75,0:11:16.96,Default,Wow. What do you know?
+Dialogue: 0,0:11:17.05,0:11:18.39,Default,Huh. That was easy.
+Dialogue: 0,0:11:18.47,0:11:20.89,Default,Totes malotes, dawg.
+Dialogue: 0,0:11:20.97,0:11:22.10,Default,Just kind of hard to believe,\Nyou know?
+Dialogue: 0,0:11:22.18,0:11:23.56,Default,Believe it, Morty.
+Dialogue: 0,0:11:23.64,0:11:25.85,Default,And once again, I'm flying away\Nwith everything l can carry,
+Dialogue: 0,0:11:25.93,0:11:28.34,Default,and the Zigerions\Ngot nothing of mine.
+Dialogue: 0,0:11:34.61,0:11:35.85,Default,Mr. Marklevitz,\Ndo you have a...
+Dialogue: 0,0:11:35.90,0:11:37.03,Default,minute to talk?
+Dialogue: 0,0:11:37.11,0:11:38.49,Default,Yes.
+Dialogue: 0,0:11:38.57,0:11:40.16,Default,Look, I'm a fraud.
+Dialogue: 0,0:11:40.24,0:11:41.70,Default,I mean, let's face it...
+Dialogue: 0,0:11:41.78,0:11:44.19,Default,"Hungry For Apples" is just\Na rip-off of "Got Milk?"
+Dialogue: 0,0:11:44.28,0:11:45.49,Default,It's almost identical.
+Dialogue: 0,0:11:45.58,0:11:46.79,Default,Yes.
+Dialogue: 0,0:11:46.87,0:11:48.08,Default,Okay.
+Dialogue: 0,0:11:48.16,0:11:49.32,Default,I deserve that.
+Dialogue: 0,0:11:49.41,0:11:52.70,Default,Umm... I guess...\NI'll just pack up my desk.
+Dialogue: 0,0:11:52.79,0:11:53.99,Default,Yes.
+Dialogue: 0,0:11:56.84,0:11:59.43,Default,Oh, my God.
+Dialogue: 0,0:11:59.51,0:12:02.05,Default,Wait. You know what?! No!
+Dialogue: 0,0:12:02.13,0:12:04.13,Default,The milk people don't\Nhave a patent on
+Dialogue: 0,0:12:04.22,0:12:06.10,Default,simple rhetorical questions!
+Dialogue: 0,0:12:06.18,0:12:08.64,Default,There's not even a single word\Nin "Hungry For Apples" that's
+Dialogue: 0,0:12:08.72,0:12:10.51,Default,shared by "Got Milk?"
+Dialogue: 0,0:12:10.60,0:12:12.43,Default,It's a completely\Ndifferent slogan.
+Dialogue: 0,0:12:12.52,0:12:13.82,Default,It's different!
+Dialogue: 0,0:12:13.90,0:12:15.82,Default,And I shouldn't be fired.
+Dialogue: 0,0:12:15.90,0:12:17.53,Default,I should be promoted!
+Dialogue: 0,0:12:17.61,0:12:18.85,Default,- Yes.\N- Yeah!
+Dialogue: 0,0:12:18.86,0:12:19.86,Default,Wait. Really?
+Dialogue: 0,0:12:19.90,0:12:20.94,Default,- Yes.\N- Yes!
+Dialogue: 0,0:12:21.03,0:12:22.57,Default,I mean, I'm...\Nit may be derivative,
+Dialogue: 0,0:12:22.65,0:12:24.44,Default,but it's the most successful\Ncampaign to come out of this
+Dialogue: 0,0:12:24.53,0:12:25.53,Default,agency in a long time.
+Dialogue: 0,0:12:25.53,0:12:26.94,Default,Yes.
+Dialogue: 0,0:12:27.03,0:12:28.95,Default,I-I'm not saying it should win\Nan award for commercials,
+Dialogue: 0,0:12:29.04,0:12:31.04,Default,but it could certainly be\Nnominated for an award
+Dialogue: 0,0:12:31.12,0:12:32.99,Default,for commercials specifically\Nabout apples,
+Dialogue: 0,0:12:33.08,0:12:34.70,Default,like... an Appley or something.
+Dialogue: 0,0:12:34.79,0:12:35.79,Default,Yes.
+Dialogue: 0,0:12:35.88,0:12:36.92,Default,Is there really an\Naward called the Appley
+Dialogue: 0,0:12:37.00,0:12:38.12,Default,for Apple-Related ad campaigns?
+Dialogue: 0,0:12:38.21,0:12:39.25,Default,Yes.
+Dialogue: 0,0:12:39.34,0:12:40.55,Default,- Could we nominate me?\N- Yes.
+Dialogue: 0,0:12:40.63,0:12:42.38,Default,Holy crap!
+Dialogue: 0,0:12:48.26,0:12:49.68,Default,Get in, Morty.
+Dialogue: 0,0:12:49.76,0:12:52.34,Default,I'm gonna  be able to use\Nthese processors to make some
+Dialogue: 0,0:12:52.43,0:12:54.14,Default,real important science stuff.
+Dialogue: 0,0:12:56.69,0:12:57.90,Default,Huh.
+Dialogue: 0,0:12:57.98,0:12:59.14,Default,I thought l entered\Nthe code right.
+Dialogue: 0,0:13:07.45,0:13:08.95,Default,Wha... well, what's this?
+Dialogue: 0,0:13:09.03,0:13:11.49,Default,W-what could this possibly be?
+Dialogue: 0,0:13:11.58,0:13:14.17,Default,Because it looks like\Nyou're inside a simulation...
+Dialogue: 0,0:13:14.25,0:13:17.09,Default,inside a simulation.
+Dialogue: 0,0:13:17.17,0:13:18.71,Default,You're still on the ship.
+Dialogue: 0,0:13:18.79,0:13:20.33,Default,Game-day bucket go boom.
+Dialogue: 0,0:13:20.42,0:13:22.92,Default,Sir, the, uh, doctor's\Nappointment to examine the
+Dialogue: 0,0:13:23.01,0:13:25.10,Default,discoloration on your\Nbutthole flaps was...
+Dialogue: 0,0:13:25.18,0:13:26.51,Default,Too loud, Cynthia.
+Dialogue: 0,0:13:26.59,0:13:27.75,Default,Too loud and too specific.
+Dialogue: 0,0:13:27.84,0:13:28.84,Default,Uhh...
+Dialogue: 0,0:13:30.05,0:13:31.84,Default,We've known how to make\Nconcentrated dark matter
+Dialogue: 0,0:13:31.93,0:13:33.89,Default,for a long time.
+Dialogue: 0,0:13:33.98,0:13:39.40,Default,But now we also know the code to\Nyour fabled safe, Rick Sanchez!
+Dialogue: 0,0:13:39.48,0:13:42.98,Default,All your most valuable\Nsecrets will now be ours!
+Dialogue: 0,0:13:43.07,0:13:44.74,Default,Uh, yeah, until I get home\Nbefore you and change the
+Dialogue: 0,0:13:44.82,0:13:46.33,Default,combination,\Nyou bunch of idiots!
+Dialogue: 0,0:13:46.40,0:13:47.73,Default,That is why you're\Nnever getting home.
+Dialogue: 0,0:13:47.82,0:13:48.94,Default,Get them!
+Dialogue: 0,0:13:52.58,0:13:55.42,Default,Run, Morty!
+Dialogue: 0,0:14:02.63,0:14:04.47,Default,Oh, my God!
+Dialogue: 0,0:14:20.98,0:14:21.98,Default,Ow!
+Dialogue: 0,0:14:31.12,0:14:32.25,Default,l got to tell you, this morning,
+Dialogue: 0,0:14:32.33,0:14:33.81,Default,l didn't even know\Nthis award existed.
+Dialogue: 0,0:14:33.87,0:14:35.33,Default,Now I'm holding one.
+Dialogue: 0,0:14:35.41,0:14:37.70,Default,And... um...
+Dialogue: 0,0:14:37.79,0:14:41.55,Default,look, I want to say that today\Nwas the best day of my life...
+Dialogue: 0,0:14:41.63,0:14:45.76,Default,but... the truth is, it's...\Nit's more meaningful than that.
+Dialogue: 0,0:14:45.84,0:14:46.84,Default,My man!
+Dialogue: 0,0:14:46.88,0:14:48.13,Default,Yes. Thank you, sir.
+Dialogue: 0,0:14:50.09,0:14:53.67,Default,l...am... finally complete!
+Dialogue: 0,0:14:56.60,0:14:59.19,Default,My... my... my... my man!
+Dialogue: 0,0:15:02.19,0:15:03.61,Default,Aah!
+Dialogue: 0,0:15:03.69,0:15:04.94,Default,What the hell?!
+Dialogue: 0,0:15:08.32,0:15:09.45,Default,No.
+Dialogue: 0,0:15:09.53,0:15:10.53,Default,- Jerry?!\N- Dad!
+Dialogue: 0,0:15:10.53,0:15:11.98,Default,What are you doing here?
+Dialogue: 0,0:15:12.07,0:15:13.15,Default,W-why are you\Ndressed like a waiter?
+Dialogue: 0,0:15:13.24,0:15:14.36,Default,Screw it.\NWe don't have time.
+Dialogue: 0,0:15:14.45,0:15:15.24,Default,Come on.
+Dialogue: 0,0:15:15.33,0:15:16.75,Default,No!
+Dialogue: 0,0:15:25.30,0:15:26.30,Default,Ohhhhh!
+Dialogue: 0,0:15:28.38,0:15:29.54,Default,Aah!
+Dialogue: 0,0:15:49.11,0:15:51.48,Default,Yes! Yes! Yes!
+Dialogue: 0,0:15:59.62,0:16:00.62,Default,Oof!
+Dialogue: 0,0:16:01.83,0:16:03.24,Default,Man up, Jerry!
+Dialogue: 0,0:16:03.33,0:16:04.70,Default,I may need you to\Nwork the lasers.
+Dialogue: 0,0:16:17.39,0:16:19.23,Default,Oh, man!\NThey're hot on our tail, Rick!
+Dialogue: 0,0:16:19.31,0:16:21.27,Default,I guess they really do have\Nconcentrated dark matter.
+Dialogue: 0,0:16:21.35,0:16:22.85,Default,Well, you know how to make it,\Ntoo, right, Rick?
+Dialogue: 0,0:16:22.94,0:16:23.94,Default,Yeah. Yeah, yeah, yeah.
+Dialogue: 0,0:16:24.02,0:16:25.31,Default,Uh, check the engine room.
+Dialogue: 0,0:16:25.40,0:16:28.07,Default,We just need Cesium, Plutonic\NQuarks, and bottled water.
+Dialogue: 0,0:16:30.57,0:16:31.57,Default,It's all here, Rick!
+Dialogue: 0,0:16:31.65,0:16:32.65,Default,Wow, Morty.\NLucky break.
+Dialogue: 0,0:16:32.74,0:16:33.91,Default,Grab that bucket.
+Dialogue: 0,0:16:33.99,0:16:37.16,Default,Okay, two parts Plutonic Quarks,\None part Cesium.
+Dialogue: 0,0:16:37.24,0:16:38.36,Default,Okay. Uh-huh.
+Dialogue: 0,0:16:40.70,0:16:41.87,Default,All right.
+Dialogue: 0,0:16:41.95,0:16:43.45,Default,Now empty the water bottle\Ninto the bucket and pour
+Dialogue: 0,0:16:43.54,0:16:46.55,Default,it all into the fuel tank so we\Ncan get the hell out of here!
+Dialogue: 0,0:16:46.63,0:16:47.71,Default,What are you doing, Morty?!
+Dialogue: 0,0:16:47.75,0:16:48.75,Default,There's no time!
+Dialogue: 0,0:16:55.39,0:16:57.06,Default,Oh, no.
+Dialogue: 0,0:16:57.14,0:16:58.27,Default,What the...
+Dialogue: 0,0:16:58.35,0:16:59.35,Default,No!
+Dialogue: 0,0:17:04.60,0:17:06.72,Default,Oh, my God, Rick.
+Dialogue: 0,0:17:06.81,0:17:08.48,Default,How dumb are you?
+Dialogue: 0,0:17:08.56,0:17:10.23,Default,You're inside a simulation...
+Dialogue: 0,0:17:10.32,0:17:12.32,Default,of a simulation...
+Dialogue: 0,0:17:12.40,0:17:15.11,Default,inside another giant simulation!
+Dialogue: 0,0:17:16.57,0:17:19.32,Default,W-We never had the recipe for\Nconcentrated dark matter.
+Dialogue: 0,0:17:19.41,0:17:21.00,Default,But we do now!
+Dialogue: 0,0:17:21.08,0:17:22.71,Default,We do now, sucka!
+Dialogue: 0,0:17:22.79,0:17:24.92,Default,You simulated my\Ngrandson's genitalia?!
+Dialogue: 0,0:17:25.00,0:17:27.42,Default,Y-Y-You bunch of\Ndiabolical sons of bitches!
+Dialogue: 0,0:17:27.50,0:17:29.79,Default,Kevin fought real hard to\Nsupervise that project.
+Dialogue: 0,0:17:29.88,0:17:31.88,Default,You said you weren't\Ngonna tell anyone!
+Dialogue: 0,0:17:31.96,0:17:33.75,Default,I'm never gonna live\Nthis down, am I?
+Dialogue: 0,0:17:33.84,0:17:35.13,Default,All right. Okay.\NAll right, great. Wonderful.
+Dialogue: 0,0:17:35.22,0:17:36.68,Default,You win.\NCan we go home now?
+Dialogue: 0,0:17:36.76,0:17:38.39,Default,I don't know.\NCan you?
+Dialogue: 0,0:17:38.47,0:17:39.35,Default,Ha! Nice.
+Dialogue: 0,0:17:39.43,0:17:41.02,Default,Okay, okay.
+Dialogue: 0,0:17:41.10,0:17:43.06,Default,Show this gullible\Nturd to his shuttle.
+Dialogue: 0,0:17:43.14,0:17:44.43,Default,I'm done with him.
+Dialogue: 0,0:17:44.52,0:17:45.44,Default,Oh, wait.\NLet me get a picture.
+Dialogue: 0,0:17:46.44,0:17:47.94,Default,Aww. Look at his face.
+Dialogue: 0,0:17:48.02,0:17:50.22,Default,He's trying to figure out if\Nhe's in a simulation still.
+Dialogue: 0,0:17:50.23,0:17:51.23,Default,Are you, Rick?
+Dialogue: 0,0:17:51.27,0:17:52.60,Default,Are you?
+Dialogue: 0,0:17:53.82,0:17:55.03,Default,You're not.
+Dialogue: 0,0:17:55.11,0:17:57.07,Default,Or are you?
+Dialogue: 0,0:17:59.07,0:18:01.99,Default,Oh, a-and, by the way, l don't\Nhave discolored butthole flaps.
+Dialogue: 0,0:18:02.08,0:18:03.42,Default,That was part of the simulation.
+Dialogue: 0,0:18:03.49,0:18:04.57,Default,Oh.
+Dialogue: 0,0:18:04.66,0:18:06.12,Default,Uh, sir, should I cancel\Nthat appointment, then?
+Dialogue: 0,0:18:06.21,0:18:07.67,Default,Yeah! Of course you should!
+Dialogue: 0,0:18:08.96,0:18:10.01,Default,No, keep it.
+Dialogue: 0,0:18:10.08,0:18:11.36,Default,Move it up, actually,\Nif you can.
+Dialogue: 0,0:18:16.17,0:18:17.46,Default,Hey, Jerry, don't worry about it.
+Dialogue: 0,0:18:17.55,0:18:19.25,Default,So what if the most meaningful\Nday of your life was a
+Dialogue: 0,0:18:19.34,0:18:21.80,Default,simulation operating at\Nminimum capacity?
+Dialogue: 0,0:18:21.89,0:18:23.27,Default,You know what, Rick?
+Dialogue: 0,0:18:23.35,0:18:25.56,Default,Those guys took you\Nfor a ride, too.
+Dialogue: 0,0:18:25.64,0:18:27.68,Default,You should try having a little\Nrespect for the dummies of the Universe,
+Dialogue: 0,0:18:27.77,0:18:29.57,Default,now that you're one of us.
+Dialogue: 0,0:18:29.65,0:18:31.07,Default,Maybe you're right, Jerry.
+Dialogue: 0,0:18:31.15,0:18:32.86,Default,Maybe you're right.
+Dialogue: 0,0:18:34.32,0:18:36.57,Default,All right, everybody.
+Dialogue: 0,0:18:36.65,0:18:40.11,Default,Two parts Plutonic Quarks...
+Dialogue: 0,0:18:40.20,0:18:42.41,Default,One part Cesium...
+Dialogue: 0,0:18:43.79,0:18:45.96,Default,A-and listen,\NI'm sorry for yelling earlier.
+Dialogue: 0,0:18:46.04,0:18:48.42,Default,I-I couldn't ask\Nfor a better staff.
+Dialogue: 0,0:18:48.50,0:18:51.84,Default,I love you guys,\Nand I love all your families.
+Dialogue: 0,0:18:51.92,0:18:55.05,Default,And the final ingredient...
+Dialogue: 0,0:18:57.51,0:18:58.60,Default,Whoa!
+Dialogue: 0,0:18:58.67,0:19:00.67,Default,What the hell?!\NW-what happened back there?
+Dialogue: 0,0:19:00.76,0:19:03.30,Default,Why don't you ask the smartest\Npeople in the Universe, Jerry?
+Dialogue: 0,0:19:03.39,0:19:05.19,Default,- Oh, yeah.\N- you can't.
+Dialogue: 0,0:19:05.26,0:19:06.59,Default,They blew up.
+Dialogue: 0,0:19:46.97,0:19:48.09,Default,So...
+Dialogue: 0,0:19:48.18,0:19:49.68,Default,what do you think?
+Dialogue: 0,0:19:50.69,0:19:51.48,Default,You're fired.
+Dialogue: 0,0:19:51.56,0:19:52.68,Default,Wha...
+Dialogue: 0,0:19:52.77,0:19:55.77,Default,But t-this idea was tested in a\Nstate-of-the-art simulation.
+Dialogue: 0,0:19:55.86,0:19:57.49,Default,Well, then, it was\Na terrible simulation.
+Dialogue: 0,0:19:57.57,0:19:59.07,Default,Get out.
+Dialogue: 0,0:20:02.45,0:20:05.87,Default,Man, how does a guy like that go\Nhome and have sex with his wife?
+Dialogue: 0,0:20:06.74,0:20:07.57,Default,Hey, Morty.
+Dialogue: 0,0:20:07.66,0:20:08.49,Default,What?
+Dialogue: 0,0:20:08.58,0:20:09.58,Default,Hey, little buddy.
+Dialogue: 0,0:20:09.62,0:20:11.41,Default,H-h-how you doing\Nin here right now?
+Dialogue: 0,0:20:11.50,0:20:13.38,Default,Aw, geez, Rick.\NWhat are you doing, man?
+Dialogue: 0,0:20:13.46,0:20:14.84,Default,Y-y-you're a\Ngood kid, Morty.
+Dialogue: 0,0:20:14.92,0:20:16.92,Default,Y-you're a real l-little\Nc-character, Morty.
+Dialogue: 0,0:20:17.00,0:20:18.25,Default,Oh, boy.
+Dialogue: 0,0:20:18.34,0:20:20.89,Default,You know, l had a really\Nrocky road today, M-Morty.
+Dialogue: 0,0:20:20.97,0:20:23.01,Default,You're my little friend,\Naren't you?
+Dialogue: 0,0:20:24.30,0:20:26.42,Default,We had some good times together,\Nhuh, M-Morty?
+Dialogue: 0,0:20:26.51,0:20:28.55,Default,We... you're a real\Ntrue hero out in the field.
+Dialogue: 0,0:20:28.64,0:20:31.77,Default,You're a Li... you're a real\Ntrooper, huh, M-M-Morty?
+Dialogue: 0,0:20:31.85,0:20:33.01,Default,Have you been drinking, Rick?
+Dialogue: 0,0:20:33.02,0:20:34.27,Default,I really appreciate you, Morty.
+Dialogue: 0,0:20:34.35,0:20:35.68,Default,O-okay, cool.
+Dialogue: 0,0:20:35.77,0:20:37.43,Default,A-all right, Rick...\Nyou little son of a bitch!
+Dialogue: 0,0:20:37.52,0:20:39.35,Default,Y-y... are you a simulation?!
+Dialogue: 0,0:20:39.44,0:20:40.73,Default,Huh?! Are you a simulation?!
+Dialogue: 0,0:20:40.82,0:20:42.28,Default,No! No! No!
+Dialogue: 0,0:20:42.36,0:20:43.52,Default,You little son of a bitch!
+Dialogue: 0,0:20:44.66,0:20:46.24,Default,l-I-I'm sorry, Morty.
+Dialogue: 0,0:20:46.32,0:20:47.53,Default,Y-you're a good...\Nyou're a good kid, Morty.
+Dialogue: 0,0:20:47.62,0:20:48.71,Default,Geez!
+Dialogue: 0,0:20:48.78,0:20:49.86,Default,Y-you're a good...\Nyou're a good kid.
+Dialogue: 0,0:20:49.95,0:20:51.03,Default,Oh, my god!
+Dialogue: 0,0:20:52.16,0:20:54.70,Default,W-W-What the hell?
+Dialogue: 0,0:20:54.79,0:20:55.79,Default,What a life.
+Dialogue: 0,0:20:57.59,0:20:58.97,Default,Did you get any of that?
+Dialogue: 0,0:20:59.05,0:21:00.88,Default,It's a good-a show!
