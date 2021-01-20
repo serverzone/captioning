@@ -3,6 +3,7 @@
 namespace Captioning\Format;
 
 use Captioning\File;
+use Exception;
 
 /**
  * #strictModeException - Throw an exception when in strict mode, if strict mode is implemented
@@ -29,6 +30,13 @@ class SubstationalphaFile extends File
     protected $eventsFormat = [];
     protected $stylesFormat = [];
 
+    /**
+     * Class constructor.
+     *
+     * @param string|null $_filename
+     * @param string|null $_encoding
+     * @param bool $_useIconv
+     */
     public function __construct($_filename = null, $_encoding = null, $_useIconv = false)
     {
         $this->headers = array(
@@ -96,10 +104,11 @@ class SubstationalphaFile extends File
 
     /**
      * Set script type.
-     * 
+     *
      * @param string $_value Script type, eg. 'v4.00+'
+     * @return $this
      */
-    public function setScriptType($_value)
+    public function setScriptType(string $_value): self
     {
         if (!in_array($_value, array(self::SCRIPT_TYPE_V4, self::SCRIPT_TYPE_V4_PLUS))) {
             throw new \InvalidArgumentException('Invalid script type');
@@ -110,19 +119,28 @@ class SubstationalphaFile extends File
 
     /**
      * Return script type, eg. 'v4.00'
+     *
      * @return string
+     * @throws Exception
      */
-    public function getScriptType()
+    public function getScriptType(): string
     {
         $type = $this->getHeader('ScriptType');
         if ($type === false) {
-            throw new \Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
+            throw new Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
         }
 
         return $type;
     }
 
-    public function setHeader($_name, $_value)
+    /**
+     * Set header.
+     *
+     * @param string $_name
+     * @param mixed $_value
+     * @return $this
+     */
+    public function setHeader(string $_name, $_value): self
     {
         if (array_key_exists($_name, $this->headers)) {
             $this->headers[$_name] = $_value;
@@ -131,17 +149,34 @@ class SubstationalphaFile extends File
         return $this;
     }
 
-    public function getHeader($_name)
+    /**
+     * Return header value.
+     *
+     * @param string $_name
+     * @return mixed|bool
+     */
+    public function getHeader(string $_name)
     {
         return isset($this->headers[$_name]) ? $this->headers[$_name] : false;
     }
 
-    public function getHeaders()
+    /**
+     * Return headers.
+     *
+     * @return array<string, mixed>
+     */
+    public function getHeaders(): array
     {
         return $this->headers;
     }
 
-    public function setStylesVersion($stylesVersion)
+    /**
+     * Set style version.
+     *
+     * @param string $stylesVersion
+     * @return $this
+     */
+    public function setStylesVersion(string $stylesVersion): self
     {
         if (!in_array($stylesVersion, array(self::STYLES_V4, self::STYLES_V4_PLUS))) {
             throw new \InvalidArgumentException('Invalid styles version');
@@ -152,29 +187,57 @@ class SubstationalphaFile extends File
         return $this;
     }
 
-    public function getStylesVersion()
+    /**
+     * Return style version.
+     *
+     * @return string
+     */
+    public function getStylesVersion(): string
     {
         return $this->stylesVersion;
     }
 
-    public function setStyle($_name, $_value)
+    /**
+     * Set style.
+     *
+     * @param string $_name
+     * @param mixed $_value
+     * @return void
+     */
+    public function setStyle(string $_name, $_value)
     {
         if (isset($this->styles[$_name])) {
             $this->styles[$_name] = $_value;
         }
     }
 
-    public function getStyle($_name)
+    /**
+     * Return style.
+     *
+     * @param string $_name
+     * @return false|mixed
+     */
+    public function getStyle(string $_name)
     {
         return isset($this->styles[$_name]) ? $this->styles[$_name] : false;
     }
 
-    public function getStyles()
+    /**
+     * Return styles.
+     *
+     * @return array<string, mixed>
+     */
+    public function getStyles(): array
     {
         return $this->styles;
     }
 
-    public function getNeededStyles()
+    /**
+     * Return needed styles.
+     *
+     * @return array<string, mixed>
+     */
+    public function getNeededStyles(): array
     {
         $styles = $this->styles;
 
@@ -185,44 +248,50 @@ class SubstationalphaFile extends File
         return $styles;
     }
 
-    public function setStyles($_styles)
-    {
-        $this->styles = $_styles;
-    }
-
-    public function setEvents($_events)
-    {
-        if (!empty($_events) && is_array($_events)) {
-            $this->events = $_events;
-        }
-    }
-
-    public function getEvents()
-    {
-        return $this->events;
-    }
-
-    public function addComment($_comment)
+    /**
+     * Add comment.
+     *
+     * @param string $_comment
+     * @return $this
+     */
+    public function addComment(string $_comment): self
     {
         $this->comments[] = $_comment;
+
+        return $this;
     }
 
-    public function getComments()
+    /**
+     * Return comments.
+     *
+     * @return array<string>
+     */
+    public function getComments(): array
     {
         return $this->comments;
     }
 
-    public function getNeededEvents()
+    /**
+     * Return needed events.
+     *
+     * @return array<string, mixed>
+     * @throws Exception
+     */
+    public function getNeededEvents(): array
     {
         return $this->events[$this->getScriptType()];
     }
 
-    public function parse()
+    /**
+     * Parse file.
+     *
+     * @return $this
+     * @throws Exception
+     */
+    public function parse(): self
     {
         $fileContentArray = $this->getFileContentAsArray();
         $currentSection = '';
-        $stylesFormat = [];
-        $eventsFormat = [];
 
         while (($line = $this->getNextValueFromArray($fileContentArray)) !== false) {
             $line = preg_replace('/^[\x{feff}-\x{ffff}]/u', '', $line);
@@ -233,7 +302,7 @@ class SubstationalphaFile extends File
             }
 
             // Match comments
-            if (preg_match('#^\s+;(.*)#', $line, $matches) !== 0) {
+            if (preg_match('#^\s*;(.*)#', $line, $matches) !== 0) {
                 $this->addComment($matches[1]);
                 continue;
             }
@@ -247,7 +316,7 @@ class SubstationalphaFile extends File
             switch ($currentSection) {
                 // Empty section is not allowed
                 case '':
-                    throw new \Exception(sprintf('%s is not valid file (empty section for line: "%s"', $this->filename, $line));
+                    throw new Exception(sprintf('%s is not valid file (empty section for line: "%s"', $this->filename, $line));
                     break;
 
                 // Section: Script Info
@@ -256,8 +325,14 @@ class SubstationalphaFile extends File
                     break;
 
                 // Section: V4+ Styles
+                case 'V4 Styles':
+                    $this->setStylesVersion(self::STYLES_V4);
+                    $this->parseStyles($line);
+                    break;
+
                 case 'V4+ Styles':
-                    $this->parseV4PlusStyles($line);
+                    $this->setStylesVersion(self::STYLES_V4_PLUS);
+                    $this->parseStyles($line);
                     break;
 
                 // Section: Events
@@ -273,21 +348,20 @@ class SubstationalphaFile extends File
         }
 
         // Result validation
-        if ($this->getScriptType() === false) {
-            throw new \Exception($this->filename . ' is not a proper .ass file (empty ScriptType).');
-        }
+        $this->getScriptType();
 
-        if ($this->getCuesCount() == 0) {
-            throw new \Exception($this->filename . ' is not a proper .ass file (no events).');
+        if ($this->getCuesCount() === 0) {
+            throw new Exception($this->filename . ' is not a proper .ass file (no events).');
         }
 
         return $this;
     }
 
     /**
-     * Process line in Script Info section
+     * Process line in Script Info section.
      *
-     * @param $input Whole line to process
+     * @param string $input Whole line to process
+     * @return void
      */
     protected function parseHeader(string $input) {
         $tmp = explode(':', $input);
@@ -297,11 +371,13 @@ class SubstationalphaFile extends File
     }
 
     /**
-     * Process line with V4+ styles
+     * Process line with styles.
      *
-     * @param $input Whole line to process
+     * @param string $input Whole line to process
+     * @return void
+     * @throws Exception
      */
-    protected function parseV4PlusStyles(string $input) {
+    protected function parseStyles(string $input) {
         $tmp = explode(':', $input, 2);
         if (count($tmp) != 2) {
             // #strictModeException - Might be incorrect, needs to be checked
@@ -312,7 +388,7 @@ class SubstationalphaFile extends File
         switch ($tmp[0]) {
             case 'Format':
                 if (count($this->stylesFormat) > 0) {
-                    throw new \Exception(sprintf('%s is not valid file (duplicate styles format definition).', $this->filename));
+                    throw new Exception(sprintf('%s is not valid file (duplicate styles format definition).', $this->filename));
                 }
                 $this->stylesFormat = array_map(function ($value) {
                         return trim($value);
@@ -321,35 +397,13 @@ class SubstationalphaFile extends File
 
             case 'Style':
                 if (count($this->stylesFormat) == 0) {
-                    throw new \Exception(sprintf('%s is not valid file (missing format styles before style).', $this->filename));
+                    throw new Exception(sprintf('%s is not valid file (missing format styles before style).', $this->filename));
                 }
 
-
-/*
-            // TO BE CONTINUED ...
-
-            // parsing styles
-            if ($line === '[V4+ Styles]') {
-                foreach ($tmp2 as $s) {
-                    $tmp_styles[trim($s)] = null;
+                $tmp = explode(',', $tmp[1], count($this->stylesFormat));
+                foreach ($this->stylesFormat as $index => $name) {
+                    $this->setStyle($name, $tmp[$index]);
                 }
-
-                // line Style: ....
-                $line = $this->getNextValueFromArray($fileContentArray);
-                if (substr($line, 0, 6) !== "Style:") {
-                    throw new \Exception($this->filename . ' is not valid file (style line).');
-                }
-                $tmp2 = explode(',', substr($line, 7));
-                $i = 0;
-                foreach (array_keys($tmp_styles) as $s) {
-                    $this->setStyle($s, trim($tmp2[$i]));
-                    $i++;
-                }
-
-                break;
-            }
-        }
-*/
                 break;
 
             default:
@@ -359,9 +413,10 @@ class SubstationalphaFile extends File
     }
 
     /**
-     * Process line in Events section
+     * Process line in Events section.
      *
-     * @param $input Whole line to process
+     * @param string $input Whole line to process
+     * @throws Exception
      */
     protected function parseEvent(string $input) {
         $tmp = explode(':', $input, 2);
@@ -374,15 +429,15 @@ class SubstationalphaFile extends File
             case 'Format':
                 $format = explode(',', $tmp[1]);
                 // This is a hack to allow duplicate Format lines
-                if (count($this->eventsFormat) > 0 && $format != $this->eventsFormat) {
-                    throw new \Exception(sprintf('%s is not a valid file (duplicate events format definition)', $this->filename));
+                if (count($this->eventsFormat) > 0 && $format !== $this->eventsFormat) {
+                    throw new Exception(sprintf('%s is not a valid file (duplicate events format definition)', $this->filename));
                 }
                 $this->eventsFormat = $format;
                 break;
             case 'Dialogue':
                 $tmp[1] = trim($tmp[1]);
                 if (count($this->eventsFormat) == 0) {
-                    throw new \Exception(sprintf('%s is not a valid file (events format not defined)', $this->filename));
+                    throw new Exception(sprintf('%s is not a valid file (events format not defined)', $this->filename));
                 }
                 $row = [
                     'start'   => null,
@@ -412,11 +467,17 @@ class SubstationalphaFile extends File
         }
     }
 
-    public function buildPart($_from, $_to)
+    /**
+     * Build part.
+     *
+     * @param int $_from
+     * @param int $_to
+     * @return $this
+     * @throws Exception
+     */
+    public function buildPart($_from, $_to): self
     {
-        if ($this->getHeader('ScriptType') === false) {
-            throw new \Exception('Script type not set');
-        }
+        $this->getScriptType();
 
         // headers
         $buffer = '[Script Info]' . $this->lineEnding;

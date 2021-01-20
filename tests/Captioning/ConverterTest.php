@@ -1,4 +1,5 @@
 <?php
+
 namespace Captioning;
 
 use Captioning\Format\SubripFile;
@@ -83,6 +84,7 @@ nice to meet you.
         $file = new SubripFile($filename);
 
         $content = "[Script Info]
+; This is a Sub Station Alpha v4 script.
 Title: <untitled>
 Original Script: <unknown>
 ScriptType: v4.00
@@ -108,10 +110,11 @@ Dialogue: Marked=0,0:01:12.50,0:01:32.50,Default,,0000,0000,0000,,OK, let's go.
 ";
 
         $this->assertEquals($content, $file->convertTo('substationalpha')
-                ->setScriptType(SubstationalphaFile::SCRIPT_TYPE_V4)
-                ->setStylesVersion(SubstationalphaFile::STYLES_V4)
-                ->build()
-                ->getFileContent());
+            ->setScriptType(SubstationalphaFile::SCRIPT_TYPE_V4)
+            ->setStylesVersion(SubstationalphaFile::STYLES_V4)
+            ->addComment('This is a Sub Station Alpha v4 script.')
+            ->build()
+            ->getFileContent());
     }
 
     public function testSubrip2SubstationalphaConversionV4plus()
@@ -146,9 +149,9 @@ Dialogue: 0,0:01:12.50,0:01:32.50,Default,,0000,0000,0000,,OK, let's go.
 ";
 
         $this->assertEquals($content, $file->convertTo('substationalpha')
-                ->setScriptType(SubstationalphaFile::SCRIPT_TYPE_V4_PLUS)
-                ->build()
-                ->getFileContent());
+            ->setScriptType(SubstationalphaFile::SCRIPT_TYPE_V4_PLUS)
+            ->build()
+            ->getFileContent());
     }
 
     /**
